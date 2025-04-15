@@ -4,7 +4,7 @@ describe('Orange HMN Tests', () => {
 
 
   it('Login com sucesso', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(userData.userSucess.UserName)
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(userData.userSucess.password)
     cy.get('.oxd-button').click()
@@ -12,7 +12,7 @@ describe('Orange HMN Tests', () => {
   })
 
   it('Login Falho', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(userData.userFail.UserName)
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(userData.userFail.password)
     cy.get('.oxd-button').click()
